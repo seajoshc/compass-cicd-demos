@@ -38,6 +38,7 @@ jobs:
           emit-event-annotation: "${{ GITHUB_JOB }}:${{ GITHUB_REF }}:${{ GITHUB_SHA }}"
           compass-api-key: ${{ secrets.COMPASS_API_KEY }} # maybe we allow updates without connecting Compass to an entire GitHub org
           compass-yaml: "path/to/compass.yml" # infer it sits in the root dir by default
+        run: echo "emitting a build/test event to the Compass activity feed!"
   Deploy-the-Thing:
     needs: Test-the-Thing
     runs-on: ubuntu-latest
