@@ -21,6 +21,8 @@ jobs:
   Run-the-Thing:
     runs-on: ubuntu-latest
     steps:
+      - name: Check out repository code
+        uses: actions/checkout@v2
       - name: Hit itttttttt
         run: cd ${{ github.workspace }}
       - run: chmod +x main.py
