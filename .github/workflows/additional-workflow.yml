@@ -18,7 +18,8 @@ jobs:
         run: |
           ls ${{ github.workspace }}
       - run: echo "🍏 This job's status is ${{ job.status }}."
-  Run-the-Thing:
+  Test-the-Thing:
+    needs: Build-the-Thing
     runs-on: ubuntu-latest
     steps:
       - name: Check out repository code
@@ -27,3 +28,15 @@ jobs:
         run: cd ${{ github.workspace }}
       - run: chmod +x main.py
       - run: ./main.py
+  Deploy-the-Thing:
+    needs: Test-the-Thing
+    runs-on: ubuntu-latest
+    steps:
+      - name: Fake deploy to AWS
+        run: echo "yep, totallllly deploying to AWS right meow..."
+      - name: Send deployment event to Compass
+        #uses: actions/atlassian-compass@v1
+        with:
+          compass-api-key: ${{ secrets.COMPASS_API_KEY }} # maybe we allow updates without connecting Compass to an entire GitHub org
+          compass-yaml: "path/to/compass.yml" # infer it sits in the root dir by default
+        run: echo "emitting a deployment event to the Compass activity feed!"
