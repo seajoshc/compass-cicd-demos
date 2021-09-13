@@ -1,10 +1,10 @@
-name: GitHub Actions Demo
+name: Truly Random Builds
 on:
   push:
   schedule:
     - cron: "45 * * * *"
 jobs:
-  Explore-GitHub-Actions:
+  Build:
     runs-on: ubuntu-latest
     steps:
       - run: echo "🎉 The job was automatically triggered by a ${{ github.event_name }} event."
