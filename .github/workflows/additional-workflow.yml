@@ -18,6 +18,9 @@ jobs:
         run: |
           ls ${{ github.workspace }}
       - run: echo "🍏 This job's status is ${{ job.status }}."
+  Run-the-Thing:
+    runs-on: ubuntu-latest
+    steps:
       - name: Hit itttttttt
         run: cd ${{ github.workspace }}
       - run: chmod +x main.py
