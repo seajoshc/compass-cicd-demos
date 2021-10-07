@@ -3,6 +3,8 @@ kind: Component
 metadata:
   name: ghactions
   description: GitHub Actions demo repo
+  annotations:
+    github.com/project-slug: github.com/seajoshc/ghactions
   tags:
     - python
     - demo
