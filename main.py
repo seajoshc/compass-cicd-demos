@@ -6,8 +6,8 @@ weeeee = random.choice([True, False])
 
 if weeeee:
     time.sleep(random.randint(2, 5))
-    print("noice!")
+    print("noice")
     exit(0)
 else:
-    print("nahhhh!")
+    print("nahhhh")
     exit(69)
