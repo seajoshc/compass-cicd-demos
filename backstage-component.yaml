@@ -4,7 +4,7 @@ metadata:
   name: ghactions
   description: GitHub Actions demo repo
   annotations:
-    github.com/project-slug: seajoshc/ghactions
+    github.com/project-slug: 'seajoshc/ghactions'
   tags:
     - python
     - demo
