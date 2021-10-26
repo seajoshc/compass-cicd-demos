@@ -36,6 +36,7 @@ jobs:
   Deploy-the-Thing:
     needs: Test-the-Thing
     runs-on: ubuntu-latest
+    environment: production
     steps:
       - name: Fake deploy to AWS
         run: echo "yep, totallllly deploying to AWS right meow..."
