@@ -20,5 +20,4 @@ jobs:
       - run: echo "🍏 This job's status is ${{ job.status }}."
       - name: Hit itttttttt
         run: cd ${{ github.workspace }}
-      - run: chmod +x main.py
-      - run: ./main.py
+      - run: python src/main.py
