@@ -32,7 +32,7 @@ jobs:
       - run:
           name: Upload Swagger spec to Compass
           # This assumes pytest is installed via the install-package step above
-          command: 'curl -X POST -H "Content-Type: application/json" -d @swagger.json $SWAGGER_URL'
+          command: 'curl -X POST -H "Content-Type: application/json" -d @swagger.json $COMPASS_SWAGGER_URL'
 
 # Invoke jobs via workflows
 # See: https://circleci.com/docs/2.0/configuration-reference/#workflows
